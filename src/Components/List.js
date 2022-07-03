@@ -39,6 +39,8 @@ function List() {
     setTodos(updatedTodos);
   };
 
+  const resetTodos = () => setTodos([]);
+
   return (
     <div>
       <h1>Todo's List (Make your day)</h1>
@@ -49,6 +51,7 @@ function List() {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
+      <button onClick={resetTodos} className="reset-button">Reset Todos</button>
     </div>
   );
 }
